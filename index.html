@@ -139,19 +139,19 @@
       let components = '';
       if (canPlaceOn[0]) {
         const canPlaceOnComponent = `"minecraft:can_place_on": { "blocks": [${canPlaceOn.map(block => `"${block.trim()}"`).join(', ')}] }`;
-        components += `{${canPlaceOnComponent}}, `;
+        components += `${canPlaceOnComponent}, `;
       }
       if (canDestroy[0]) {
         const canDestroyComponent = `"minecraft:can_destroy": { "blocks": [${canDestroy.map(block => `"${block.trim()}"`).join(', ')}] }`;
-        components += `{${canDestroyComponent}}, `;
+        components += `${canDestroyComponent}, `;
       }
       if (itemLockMode) {
         const itemLockComponent = `"minecraft:item_lock": { "mode": "${itemLockMode}" }`;
-        components += `{${itemLockComponent}}, `;
+        components += `${itemLockComponent}, `;
       }
       if (keepOnDeath) {
         const keepOnDeathComponent = `"minecraft:keep_on_death": {}`;
-        components += `{${keepOnDeathComponent}}, `;
+        components += `${keepOnDeathComponent}, `;
       }
       components = components.slice(0, -2);
 
